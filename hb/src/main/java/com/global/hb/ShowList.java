@@ -29,8 +29,6 @@ public class ShowList {
 			System.out.print(" User ID: " + adm.getUserid());
 			System.out.print(" || Password : " + adm.getPassword());
 			System.out.print("\n=================================================================\n");
-			System.out.print("\n=================================================================\n");
-			System.out.print("\n=================================================================\n");
 
 		}
 
