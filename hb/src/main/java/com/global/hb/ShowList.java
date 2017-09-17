@@ -22,7 +22,7 @@ public class ShowList {
 
         Query query = session1.createQuery("FROM AdminLogin");
         List<AdminLogin> adminlist = query.list();
-
+        String t = "";
         for (Iterator<AdminLogin> iterator
                 = adminlist.iterator(); iterator.hasNext();) {
             AdminLogin adm = iterator.next();
@@ -32,6 +32,7 @@ public class ShowList {
              System.out.print("\n=================================================================\n");
              
         }
+        
 
         session1.getTransaction().commit();
 
