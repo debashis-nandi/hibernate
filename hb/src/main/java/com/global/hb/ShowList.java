@@ -21,10 +21,10 @@ public class ShowList {
 		session1.beginTransaction();
 
 		Query query = session1.createQuery("FROM AdminLogin");
-		List<AdminLogin> adminlist = query.list();
-		String t = "";
-		for (Iterator<AdminLogin> iterator = adminlist.iterator(); iterator.hasNext();) {
-			AdminLogin adm = iterator.next();
+		List adminlist = query.list();
+		
+		for (Iterator iterator = adminlist.iterator(); iterator.hasNext();) {
+			AdminLogin adm = (AdminLogin) iterator.next();
 			System.out.print("\n=================================================================\n");
 			System.out.print(" User ID: " + adm.getUserid());
 			System.out.print(" || Password : " + adm.getPassword());
