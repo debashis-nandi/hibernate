@@ -1,8 +1,6 @@
 package com.global.hb;
 
-import java.util.List;
 import org.hibernate.*;
-import org.hibernate.cfg.*;
 
 /**
  * Hello world!
@@ -15,18 +13,21 @@ public class App {
             Session session = HibernateUtil.getSession();
 
             AdminLogin admin = new AdminLogin();
-            admin.setUserid("dessssssba2");
-            admin.setPassword("pointwer2");
+            admin.setUserid("debashis nandi");
+            admin.setPassword("maldanga-memari");
 
             session.beginTransaction();
             session.save(admin);
             session.getTransaction().commit();
+            
+            System.out.print("Record has been submitted."  );
+
             session.close();
 
 
 
-        } catch (Exception ex) {
-            System.out.print("--------------->>" + ex.getStackTrace());
+        } catch (HibernateException  ex) {
+            System.out.print("--------------->>" + ex.getMessage());
         }
     }
 }
