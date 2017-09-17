@@ -8,7 +8,6 @@ package com.global.hb;
 import java.util.Iterator;
 import java.util.List;
 import org.hibernate.*;
-import org.hibernate.cfg.*;
 
 /**
  *
@@ -22,15 +21,16 @@ public class ShowList {
         session1.beginTransaction();
 
         Query query = session1.createQuery("FROM AdminLogin");
-        List adminlist = query.list();
+        List<AdminLogin> adminlist = query.list();
 
-        for (Iterator iterator
+        for (Iterator<AdminLogin> iterator
                 = adminlist.iterator(); iterator.hasNext();) {
-            AdminLogin adm = (AdminLogin) iterator.next();
+            AdminLogin adm = iterator.next();
             System.out.print("\n=================================================================\n");
             System.out.print(" User ID: " + adm.getUserid());
             System.out.print(" || Password : " + adm.getPassword());
              System.out.print("\n=================================================================\n");
+             
         }
 
         session1.getTransaction().commit();
