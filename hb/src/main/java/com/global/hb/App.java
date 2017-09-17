@@ -14,8 +14,8 @@ public class App {
 
 
             AdminLogin admin = new AdminLogin();
-            admin.setUserid("debashis nandi");
-            admin.setPassword("maldanga-memari");
+            admin.setUserid("poulomi nandi");
+            admin.setPassword("kolkata-india");
 
             session.beginTransaction();
             session.save(admin);

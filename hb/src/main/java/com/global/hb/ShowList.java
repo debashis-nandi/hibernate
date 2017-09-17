@@ -22,7 +22,7 @@ public class ShowList {
 		session1.beginTransaction();
 
 		@SuppressWarnings("unchecked")
-		List<AdminLogin> adminlist = session1.createQuery("FROM com.global.hb.AdminLogin").getResultList();
+		List<AdminLogin> adminlist = session1.createQuery("FROM AdminLogin").getResultList();
 
 		for (Iterator<AdminLogin> iterator = adminlist.iterator(); iterator.hasNext();) {
 			AdminLogin adm = iterator.next();
