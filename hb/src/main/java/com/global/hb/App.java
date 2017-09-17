@@ -12,6 +12,7 @@ public class App {
         try {
             Session session = HibernateUtil.getSession();
 
+
             AdminLogin admin = new AdminLogin();
             admin.setUserid("debashis nandi");
             admin.setPassword("maldanga-memari");
