@@ -1,10 +1,15 @@
 package com.global.hb;
 
 import java.time.LocalDate;
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class Customer {
 	
+	@Id
+	@GeneratedValue
 	private int customerId;
 	private String custName;
 	private String custEmail;
@@ -12,6 +17,9 @@ public class Customer {
 	private LocalDate custDOB;
 	
 	
+
+	protected Customer() {
+	}
 
 	public Customer(int customerId, String custName, String custEmail, String custPhone, LocalDate custDOB) {
 		super();
