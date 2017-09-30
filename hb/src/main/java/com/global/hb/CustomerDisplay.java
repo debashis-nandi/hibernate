@@ -17,7 +17,7 @@ public class CustomerDisplay {
 			customerList.add(customer);
 		}
 		System.out.println("------------------------Phone Number ends with 2------------------------------------");
-		customerList.stream().filter(t -> t.getCustPhone().endsWith("0")).forEach(t -> System.out.println(t.toString()));
+		customerList.stream().filter(t -> t.getCustPhone().endsWith("2")).forEach(t -> System.out.println(t.toString()));
 	}
 
 }
